@@ -10,11 +10,11 @@
     {
       "id": "dev.local.douban-tv-coming",
       "name": "豆瓣即将播出订阅",
-      "version": "1.0.12",
+      "version": "1.0.13",
       "description": "定时抓取豆瓣即将播出剧集，按想看人数与地区/类型筛选，在播出窗口期内自动创建订阅并发送通知。",
       "author": "Thinkpad",
-      "package_url": "packages/douban-tv-coming-1.0.12.d115p",
-      "sha256": "5a540434440f2ad463abe968740f4a7795ef4b7666f022d802c14abc29b0ec4c",
+      "package_url": "packages/douban-tv-coming-1.0.13.d115p",
+      "sha256": "c236701aaf664581558e19af3ca980e4d3a9d8e1b6335937aca36dd2d863eb96",
       "capabilities": [
         {
           "capability": "network.http",
