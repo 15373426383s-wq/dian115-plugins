@@ -1,0 +1,47 @@
+{
+  "$schema": "./index.schema.json",
+  "schema_version": 1,
+  "repository": {
+    "id": "thinkpad.local.douban",
+    "name": "豆瓣即将播出订阅源"
+  },
+  "generated_at": "2026-08-20T00:00:00Z",
+  "plugins": [
+    {
+      "id": "dev.local.douban-tv-coming",
+      "name": "豆瓣即将播出订阅",
+      "version": "1.0.11",
+      "description": "定时抓取豆瓣即将播出剧集，按想看人数与地区/类型筛选，在播出窗口期内自动创建订阅并发送通知。",
+      "author": "Thinkpad",
+      "package_url": "packages/douban-tv-coming-1.0.11.d115p",
+      "sha256": "2e7cd40c40e7cda99a5870499fa57d3ded361d43c9315c78a6c7b1de58f00f88",
+      "capabilities": [
+        {
+          "capability": "network.http",
+          "reason": "抓取豆瓣即将播出 RSS 列表，并查询 TMDB 首播日期"
+        },
+        {
+          "capability": "network.proxy",
+          "reason": "NAS 无法直连外网时按系统代理访问 RSS 与 TMDB"
+        },
+        {
+          "capability": "subscriptions.create",
+          "reason": "为筛选通过的新剧集创建订阅"
+        },
+        {
+          "capability": "storage.kv",
+          "reason": "保存插件配置、统计与已处理记录，避免重复订阅"
+        },
+        {
+          "capability": "scheduler.register",
+          "reason": "按 cron 周期定时执行豆瓣即将播出检查"
+        },
+        {
+          "capability": "notifications.plugin.send",
+          "reason": "订阅创建成功或检查失败时通过宿主通知通道告知用户"
+        }
+      ],
+      "published_at": "2026-08-20T00:00:00Z"
+    }
+  ]
+}
